@@ -67,7 +67,7 @@ make_target() {
 
   # Compile device trees
 #  LDFLAGS="" make $DTB_LIST_FILTERED
-  LDFLAGS="" make $KERNEL_UBOOT_EXTRA_TARGET
+  kernel_make $KERNEL_UBOOT_EXTRA_TARGET
   mv arch/$TARGET_KERNEL_ARCH/boot/dts/amlogic/*.dtb $PKG_BUILD
 
   popd > /dev/null
