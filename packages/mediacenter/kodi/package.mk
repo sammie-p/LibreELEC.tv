@@ -41,10 +41,6 @@ configure_package() {
 
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET dbus"
 
-  if [ "$PROJECT" = "Amlogic" -o "$PROJECT" = "S8X2" ]; then
-    PKG_PATCH_DIRS="amlogic"
-  fi
-
   if [ "$DISPLAYSERVER" = "x11" ]; then
     PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET libX11 libXext libdrm libXrandr"
     KODI_XORG="-DCORE_PLATFORM_NAME=x11"
