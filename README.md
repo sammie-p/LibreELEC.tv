@@ -1,4 +1,4 @@
-# Minix X8 serie edition
+# Remarks
 to be able to shutdown the box , you need to reflash it.
 see https://forum.libreelec.tv/thread/12155-libreelec-9-x-kodi-18-x-for-minix-x8-x8h-x8h/?pageNo=1
 for more info
