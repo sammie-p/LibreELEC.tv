@@ -1,6 +1,6 @@
---- /dev/null	2017-09-03 11:58:33.353873900 +0200
-+++ b/arch/arm/boot/dts/amlogic/meson8m2_n200_2G_old.dtd	2017-08-30 09:01:45.000000000 +0200
-@@ -0,0 +1,1932 @@
+--- /dev/null	1970-01-01 01:00:00.000000000 +0100
++++ B/arch/arm/boot/dts/amlogic/meson8m2_n200_2G_old.dtd	2019-04-08 21:57:06.000000000 +0200
+@@ -0,0 +1,1935 @@
 +/dts-v1/;
 +/// ***************************************************************************************\n
 +//$$ PROJECT="meson8m2"
@@ -1866,15 +1866,18 @@
 +		};
 +
 +	};
-+	       ethmac: ethernet@0xc9410000{
-+				compatible = "amlogic,meson8m2-rgmii-dwmac", "snps,dwmac";
-+               reg = <0xc9410000 0x10000
-+		       0xc1108108 0x4>;
-+               interrupts = <0 8 1>;
-+                interrupt-names = "macirq";
-+		      clocks = "clk81";
-+               clock-names = "stmmaceth";
-+       };
++//$$ MODULE="Ethernet"
++//$$ DEVICE="meson-eth"
++//$$ L2 PROP_STR = "status"
++    meson-eth{
++		compatible = "amlogic,meson-eth";
++		dev_name = "meson-eth";
++		status = "okay";
++		ethbaseaddr = <0xfe0c0000>;
++		interruptnum = <40>;
++		new_maclogic = <1>;
++		reset_delay = <200>;
++	};
 +/// ***************************************************************************************
 +///	-	DVB
 +//$$ MODULE="DVB"
