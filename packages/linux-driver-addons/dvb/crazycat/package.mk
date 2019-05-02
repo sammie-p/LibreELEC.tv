@@ -36,6 +36,10 @@ make_target() {
     sed -e 's/CONFIG_DVB_LGDT3306A=m/# CONFIG_DVB_LGDT3306A is not set/g' -i v4l/.config
   fi
 
+ # disable drivers
+    sed -e 's/CONFIG_VIDEO_S5C73M3=m/# CONFIG_VIDEO_S5C73M3 is not set/g' -i v4l/.config
+
+
   # add menuconfig to edit .config
   kernel_make VER=$KERNEL_VER SRCDIR=$(kernel_path)
 }
